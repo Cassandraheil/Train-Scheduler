@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Train Scheduler</title>
+        <link rel="stylesheet" href="assets/reset.css">
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- bootstrap  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- firebase -->
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+        <!-- moment.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+        <!-- css sheet  -->
+        <link rel="stylesheet" href="assets/style.css">
+      </head>
+      <body>
+        <div class="container">
+          <div class="head">
+            <h1>Train Scheduler</h1>
+            <h3>How Do Trains Drink?...They Chug</h3>
+            <!-- if i have time itd be bomb to put a bunch of train puns when you click here -->
+          </div>
+          <br>
+          <div id="container">
+            <h4>Current Train Schedule</h4>
+            <table id="table" class="table table-striped table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">TRAIN NAME</th>
+                  <th scope="col">DESTINATION</th>
+                  <th scope="col">MINUTES AWAY</th>
+                  <th scope="col">FREQUENCY (mins)</th>
+                  <th scope="col">NEXT ARRIVAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>name</td>
+                  <td>destination</td>
+                  <td>2:30</td>
+                  <td>30</td>
+                  <td>12</td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <div id="wrapper">
+            <h4 class="addHeading">Know another train schedule? Add it here</h4>
+            <br>
+            <p>Train Name</p>
+            <input class="form-control train-name" type="text" placeholder="Thomas The Train">
+            <br>
+            <p>Destination</p>
+            <input class="form-control destination" type="text" placeholder="The Land of Ooo">
+            <br>
+            <p>First Train Time </p>
+            <input class="form-control train-time" type="text" placeholder="HH:MM--Military Time">
+            <br>
+            <p>Frequency (mins)</p>
+            <input class="form-control frequency" type="text" placeholder="This Train comes every __ minutes">
+            <br>
+            <button type="button" id="submit" class="btn btn-dark">Submit</button>
+          </div>
+        </div>
+        
+        
+        <!-- javascript -->
+        <script type="text/javascript" src="assets/firebase.js"></script>
+        
+      </body>
+      
+      </html>
+      
