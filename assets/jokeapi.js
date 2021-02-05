@@ -10,6 +10,17 @@ const settings = {
 	}
 };
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
+$("#jokebtn").click(function(){
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        console.log(response.content);
+
+        var joke = response.content
+
+        
+        console.log("this btn clicked");
+        $("#joke").replaceWith(joke);
+
+    });
 });
+
