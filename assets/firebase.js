@@ -51,10 +51,10 @@
         var newTime = childSnapshot.val().firstTime;
         var newFrequency = childSnapshot.val().frequency;
 
-        console.log(newName);
-        console.log(newDestination);
-        console.log(newTime);
-        console.log(newFrequency);
+        // console.log(newName);
+        // console.log(newDestination);
+        // console.log(newTime);
+        // console.log(newFrequency);
 
         //moment.js stuff
         var momentTime = newTime;
