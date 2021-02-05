@@ -21,7 +21,7 @@
         var destination = $(".destination").val().trim()
         var firstTime = $(".train-time").val().trim()
         var frequency = $(".frequency").val().trim()
-        console.log(name)
+        // console.log(name) 
 
 
         database.ref().push({        ///if something doesn't work check and make sure i didnt reverse these ex: train-name: name,
@@ -31,20 +31,20 @@
             frequency: frequency
         });
 
-        console.log("train name", name)
+        // console.log("train name", name)
 
         //clear previous input
         $(".train-name").val("");
         $(".destination").val("");
         $(".train-time").val("");
         $(".frequency").val("");
-        console.log("train name is...", name)
+        // console.log("train name is...", name)
        
     });
 
 
     database.ref().on("child_added", function(childSnapshot) {
-        console.log(childSnapshot.val())
+        // console.log(childSnapshot.val())
 
         var newName = childSnapshot.val().name;
         var newDestination= childSnapshot.val().destination;
